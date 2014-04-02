@@ -1,0 +1,41 @@
+// http://webdesign.tutsplus.com/articles/a-web-designers-typographic-boilerplate--webdesign-15234
+// https://webdesign.tutsplus.com/articles/taking-ems-even-further--webdesign-12543
+// http://uxdesign.smashingmagazine.com/2011/11/29/the-perfect-paragraph/
+// http://typeplate.com/
+// http://css-tricks.com/snippets/css/better-helvetica/
+// http://www.css3.com/css-text-justify/
+
+html {
+    font: 100%;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+}
+
+// http://css-tricks.com/snippets/css/common-unicode-icons/
+blockquote {
+    &:before {
+        content: "\275D";
+    }
+    &:after {
+        content: "\275E";
+    }
+}
+
+code {
+  white-space: pre;
+}
+
+label {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+p {
+    text-align: justify;      // "text-align" is here as a fallback for browsers that don't support "text-justify"
+    text-justify: newspaper;
+    line-height: 1.5;
+    letter-spacing: 0.0625em;
+    margin: 0 0 1em;          // margin: top horizontal bottom <-- Three-value syntax
+}

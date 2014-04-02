@@ -1,0 +1,22 @@
+{
+  "name": "semantic-style",
+  "version": "0.0.0",
+  "description": "A semantic LESS/CSS boilerplate project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Benner",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.6.0",
+    "gulp-bless": "0.0.3",
+    "gulp-csscomb": "^0.1.0",
+    "gulp-less": "^1.2.3",
+    "gulp-recess": "^0.3.0"
+  },
+  "dependencies": {
+    "brunch": "^1.7.13",
+    "normalize.css": "^3.0.1"
+  }
+}
