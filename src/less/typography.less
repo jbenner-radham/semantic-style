@@ -10,7 +10,12 @@ html {
 }
 
 body {
-    text-rendering: optimizeLegibility;
+    line-height: 1;
+    text-rendering: optimizeLegibility; // <- Technically SVG property, not CSS
+}
+
+blockquote p {
+  hanging-punctuation: first;
 }
 
 // @link <http://css-tricks.com/snippets/css/common-unicode-icons/>
@@ -25,7 +30,8 @@ blockquote {
 
 code {
   white-space: pre;
-  font-family: monospace;
+  /** This is covered by "normalize.css" */
+  //- font-family: monospace;
 }
 
 label {
@@ -39,4 +45,11 @@ p {
     line-height: 1.5;
     letter-spacing: 0.0625em;
     margin: 0 0 1em;          // margin: top horizontal bottom <-- Three-value syntax
+}
+
+/** @see https://css-tricks.com/snippets/css/fancy-ampersand/ */
+.amp {
+    font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+    font-style: italic;
+    font-weight: normal;
 }

@@ -2,3 +2,17 @@
 @import "typography";
 @import "media/print";
 @import "forms";
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/** @see https://css-tricks.com/pseudo-element-roundup/ */
+// Maybe change to `data-language` instead of `rel`?
+pre:after {
+    content: attr(rel);
+    position: absolute;
+    top: 22px;
+    right: 12px;
+}

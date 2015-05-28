@@ -7,6 +7,11 @@
         text-shadow: none !important;
     }
 
+    /** @see https://css-tricks.com/pseudo-element-roundup/ */
+    a[href]:after {
+        content: " <" attr(href) "> ";
+    }
+
     p, h2, h3 {
         orphans: 3; // http://css-tricks.com/almanac/properties/o/orphans/
         widows: 3;  // http://css-tricks.com/almanac/properties/w/widows/
