@@ -1,53 +1,53 @@
-// http://webdesign.tutsplus.com/articles/a-web-designers-typographic-boilerplate--webdesign-15234
-// https://webdesign.tutsplus.com/articles/taking-ems-even-further--webdesign-12543
-// http://uxdesign.smashingmagazine.com/2011/11/29/the-perfect-paragraph/
-// http://typeplate.com/
-// http://css-tricks.com/snippets/css/better-helvetica/
-// http://www.css3.com/css-text-justify/
+// <http://webdesign.tutsplus.com/articles/a-web-designers-typographic-boilerplate--webdesign-15234>
+// <https://webdesign.tutsplus.com/articles/taking-ems-even-further--webdesign-12543>
+// <http://uxdesign.smashingmagazine.com/2011/11/29/the-perfect-paragraph/>
+// <http://typeplate.com/>
+// <http://css-tricks.com/snippets/css/better-helvetica/>
+// <http://www.css3.com/css-text-justify/>
+
+blockquote {
+    /** @see <http://css-tricks.com/snippets/css/common-unicode-icons/> */
+    &::before {
+        content: '\275D';
+    }
+
+    &::after {
+        content: '\275E';
+    }
+
+    p {
+        hanging-punctuation: first;
+    }
+}
+
+body {
+    line-height: 1;
+    text-rendering: optimizeLegibility; /* Technically an SVG property, not CSS */
+}
 
 html {
     font: 100%;
 }
 
-body {
-    line-height: 1;
-    text-rendering: optimizeLegibility; // <- Technically SVG property, not CSS
-}
-
-blockquote p {
-  hanging-punctuation: first;
-}
-
-// @link <http://css-tricks.com/snippets/css/common-unicode-icons/>
-blockquote {
-    &:before {
-        content: "\275D";
-    }
-    &:after {
-        content: "\275E";
-    }
-}
-
-code {
-  white-space: pre;
-  /** This is covered by "normalize.css" */
-  //- font-family: monospace;
-}
-
 label {
-    font-size: 1.1em;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
 p {
-    text-align: justify;      // "text-align" is here as a fallback for browsers that don't support "text-justify"
+    /**
+     * "text-align" is here as a fallback for browsers that don't support
+     * "text-justify." However justification via this method can cause
+     * accessibility issues so "newspaper" justification is preferred.
+     */
+    text-align: justify;
     text-justify: newspaper;
     line-height: 1.5;
-    letter-spacing: 0.0625em;
-    margin: 0 0 1em;          // margin: top horizontal bottom <-- Three-value syntax
+    letter-spacing: 0.0625rem;
+    margin: 0 0 1rem;  // margin: [top] [horizontal] [bottom] <-- 3-value syntax
 }
 
-/** @see https://css-tricks.com/snippets/css/fancy-ampersand/ */
+/** @see <https://css-tricks.com/snippets/css/fancy-ampersand/> */
 .amp {
     font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
     font-style: italic;

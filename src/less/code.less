@@ -1,0 +1,17 @@
+code {
+    /* This is covered by "normalize.css" */
+    /* font-family: monospace;            */
+    white-space: pre;
+
+    /**
+     * "Label blocks of code with the language it is in"
+     * (Maybe change to `data-language` instead of `rel`?)
+     * @see <https://css-tricks.com/pseudo-element-roundup/>
+     */
+    &::after {
+        content: attr(rel);
+        position: absolute;
+        top: 22px;
+        right: 12px;
+    }
+}
