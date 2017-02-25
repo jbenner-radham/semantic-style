@@ -6,9 +6,15 @@ const less    = require('gulp-less');
 const rename  = require('gulp-rename');
 
 gulp.task('style', () => {
+    const options = {
+        sourceMap: {
+            sourceMapFileInline: true
+        }
+    };
+
     return gulp.src('src/less/main.less')
         .pipe(rename('semantic-style.less'))
-        .pipe(less({sourceMap: {sourceMapFileInline: true}}))
+        .pipe(less(options))
         .pipe(csscomb())
         .pipe(gulp.dest('dist'));
 });

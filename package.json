@@ -1,14 +1,17 @@
 {
   "name": "semantic-style",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A semantic LESS/CSS boilerplate project.",
   "main": "dist/semantic-style.css",
   "scripts": {
+    "lint:js": "./node_modules/.bin/eslint gulpfile.js",
+    "prepublish": "npm run-script lint:js && gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "James Benner",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^3.16.1",
     "gulp": "^3.9.1",
     "gulp-csscomb": "^3.0.8",
     "gulp-less": "^3.3.0",
