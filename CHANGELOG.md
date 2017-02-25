@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Renamed `gulpfile.babel.js` to `gulpfile.js`.
+- Upgraded `normalize.css` to 5.0.0.
 
 ### Removed
 - Removed the `.jscsrc` and `.jshintrc` files.
