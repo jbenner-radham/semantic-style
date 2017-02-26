@@ -5,12 +5,14 @@
   "main": "dist/semantic-style.css",
   "scripts": {
     "lint:js": "./node_modules/.bin/eslint gulpfile.js",
-    "prepublish": "npm run-script lint:js && gulp",
+    "prepublish": "npm run-script lint:js && gulp less",
+    "start": "gulp serve:demo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "James Benner",
   "license": "MIT",
   "devDependencies": {
+    "browser-sync": "^2.18.8",
     "eslint": "^3.16.1",
     "gulp": "^3.9.1",
     "gulp-csscomb": "^3.0.8",

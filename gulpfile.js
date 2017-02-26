@@ -1,11 +1,12 @@
 'use strict';
 
-const csscomb = require('gulp-csscomb');
-const gulp    = require('gulp');
-const less    = require('gulp-less');
-const rename  = require('gulp-rename');
+const browserSync = require('browser-sync').create();
+const csscomb     = require('gulp-csscomb');
+const gulp        = require('gulp');
+const less        = require('gulp-less');
+const rename      = require('gulp-rename');
 
-gulp.task('style', () => {
+gulp.task('less', () => {
     const options = {
         sourceMap: {
             sourceMapFileInline: true
@@ -19,4 +20,18 @@ gulp.task('style', () => {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['style']);
+gulp.task('serve:demo', ['less'], () => {
+    const fileGlobs = ['demo/*.html', 'dist/*.css'];
+
+    browserSync.init({
+        notify: false,
+        port:   9000,
+        server: {
+            baseDir: ['demo', 'dist']
+        }
+    });
+
+    gulp.watch(fileGlobs).on('change', browserSync.reload);
+});
+
+gulp.task('default', ['less']);
