@@ -9,10 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ------------
 ### Added
 - Added ESLint for JS linting.
+- Added demo page.
 
 ### Changed
 - Renamed `gulpfile.babel.js` to `gulpfile.js`.
 - Upgraded `normalize.css` to 5.0.0.
+- Updated changelog format.
+- Updated `README.md` file.
 
 ### Removed
 - Removed the `.jscsrc` and `.jshintrc` files.

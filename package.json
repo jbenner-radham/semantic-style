@@ -4,10 +4,10 @@
   "description": "A semantic LESS/CSS boilerplate project.",
   "main": "dist/semantic-style.css",
   "scripts": {
-    "lint:js": "./node_modules/.bin/eslint gulpfile.js",
+    "lint:js": "eslint gulpfile.js",
     "prepublish": "npm run-script lint:js && gulp less",
     "start": "gulp serve:demo",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run-script prepublish"
   },
   "author": "James Benner",
   "license": "MIT",
